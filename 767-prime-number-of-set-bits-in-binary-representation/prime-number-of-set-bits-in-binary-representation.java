@@ -2,7 +2,7 @@ class Solution {
     public int countPrimeSetBits(int left, int right) {
         int result=0;
         for(int i=left;i<=right;i++){
-            int tem=setbit(i);
+            int tem=Integer.bitCount(i);
             if(isprime(tem))result++;
         }
         return result;
@@ -13,13 +13,5 @@ class Solution {
             if(n%i==0)return false;
         }
         return true;
-    }
-    private int setbit(int n){
-        String s=Integer.toBinaryString(n);
-        int c=0;
-        for(int i=0;i<s.length();i++){
-            if(s.charAt(i)=='1')c++;
-        }
-        return c;
     }
 }
