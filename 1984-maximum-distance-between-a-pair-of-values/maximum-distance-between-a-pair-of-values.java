@@ -9,7 +9,7 @@ class Solution {
                 j++;
             }else{
                 i++;
-                if(i>j)j=i;
+                j++;
             }
         }
         return max;
