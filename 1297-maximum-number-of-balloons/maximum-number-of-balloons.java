@@ -9,15 +9,11 @@ class Solution {
         for(char c:text.toCharArray()){
             mp.put(c,mp.getOrDefault(c,0)+1);
         }
-        for(Map.Entry<Character,Integer> entry:mp.entrySet()){
-            if(entry.getKey()=='b')b=entry.getValue();
-            if(entry.getKey()=='a')a=entry.getValue();
-            if(entry.getKey()=='l')l=entry.getValue();
-            if(entry.getKey()=='o')o=entry.getValue();
-            if(entry.getKey()=='n')n=entry.getValue();
-        }
-        o=o/2;
-        l=l/2;
+        b=mp.getOrDefault('b', 0);
+        a=mp.getOrDefault('a', 0);
+        l=mp.getOrDefault('l', 0)/2;
+        o=mp.getOrDefault('o', 0)/2;
+        n=mp.getOrDefault('n', 0);
         return Math.min(Math.min(Math.min(Math.min(b,a),l),o),n);
 
     }
