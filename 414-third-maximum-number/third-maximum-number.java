@@ -1,9 +1,9 @@
 class Solution {
     public int thirdMax(int[] arr) {
         int n=arr.length;
-        Long first=Long.MIN_VALUE;
-        Long sec=Long.MIN_VALUE;
-        Long thrd=Long.MIN_VALUE;
+        long first=Long.MIN_VALUE;
+        long sec=Long.MIN_VALUE;
+        long thrd=Long.MIN_VALUE;
         for(int el:arr){
             long v=(long)el;
             if(v>first){
@@ -17,7 +17,7 @@ class Solution {
                 thrd=v;
             }
         }
-        if(thrd==Long.MIN_VALUE)return first.intValue();
-        return thrd.intValue();
+        if(thrd==Long.MIN_VALUE)return (int)first;
+        return (int)thrd;
     }
 }
