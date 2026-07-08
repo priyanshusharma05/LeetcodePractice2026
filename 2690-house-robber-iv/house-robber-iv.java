@@ -3,8 +3,8 @@ class Solution {
         int min=Integer.MAX_VALUE;
         int max=Integer.MIN_VALUE;
         for(int v:nums){
-            min=Math.min(min,v);
-            max=Math.max(max,v);
+            if(v<min)min=v;
+            if(v>max)max=v;
         }
         int ans=max;
         while(min<=max){
